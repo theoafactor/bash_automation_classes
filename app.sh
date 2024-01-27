@@ -18,8 +18,10 @@ fi
 
 
 
-databaseFile=database.csv
-tierOneFile=tier1.csv
+databaseFile=/home/astronaut/teachings/bash_scripting/database.csv
+tierOneFile=/home/astronaut/teachings/bash_scripting/tier1.csv
+
+emailFile=/home/astronaut/teachings/bash_scripting/email_content.txt
 
 if [[ -f $tierOneFile ]]
 then
@@ -61,21 +63,21 @@ do
             ## check if the email_content file exists already..
             if [[ -f email_content.txt ]]
             then
-                rm email_content.txt
+                rm $emailFile
             fi
 
             ## create the email_content file
-            touch email_content.txt
+            touch $emailFile
 
             ## add the customized content
-            echo "To: $firstname" >> email_content.txt
-            echo "From: theoafactor@gmail.com" >> email_content.txt
-            echo "Subject: Welcome to the Tier3 $firstname!" >> email_content.txt
-            echo "" >> email_content.txt
-            echo "Welcome to this program $firstname, $lastname!, this is a very special program." >> email_content.txt
+            echo "To: $firstname" >> $emailFile
+            echo "From: theoafactor@gmail.com" >> $emailFile
+            echo "Subject: Welcome to the Tier3 $firstname!" >> $emailFile
+            echo "" >> $emailFile
+            echo "Welcome to this program $firstname, $lastname!, this is a very special program." >> $emailFile
 
             ## send them an email
-            ssmtp $email < email_content.txt
+            ssmtp $email < $emailFile
 
 
             ## add these users to a tier1_users file
