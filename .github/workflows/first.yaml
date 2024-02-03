@@ -11,3 +11,9 @@ jobs:
             - name: "Greeting step"
               run: echo "This is my first workflow"
 
+            - name: "List the files"
+              run: ls -a
+
+            - name: "Complete greeting the user"
+              run: echo "Good evening"
+
