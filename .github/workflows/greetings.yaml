@@ -9,9 +9,15 @@ jobs:
         steps:
             - name: "Create tester1 directory"
               run: |
-                 mkdir tester123
+                 mkdir tester123 tester124 tester125
                  cd tester123
                  touch image.png
+                 cd ../tester124
+                 touch image124.png
+                 cd ../teste125
+                 touch image125.png
+
+            
 
             - name: "Uses actions to upload the tester1 directory"
               uses: actions/upload-artifact@v4
