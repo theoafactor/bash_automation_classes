@@ -7,5 +7,16 @@ jobs:
     welcome:
         runs-on: ubuntu-latest
         steps:
-            - name: "greet the user"
-              run: echo "Welcome"
+            - name: "Create tester1 directory"
+              run: |
+                 mkdir tester1
+                 cd tester1
+                 touch image.png
+
+            - name: "Uses actions to upload the tester1 directory"
+              uses: actions/upload-artifact@v4
+              with: 
+                name: tester1 
+                path: tester1
+             
+                 
