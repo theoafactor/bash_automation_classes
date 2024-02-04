@@ -14,7 +14,7 @@ jobs:
                  touch image.png
                  cd ../tester124
                  touch image124.png
-                 cd ../teste125
+                 cd ../tester125
                  touch image125.png
 
             
