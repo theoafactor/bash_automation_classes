@@ -9,6 +9,9 @@ jobs:
         steps:
             - name: "Create tester1 directory"
               run: |
+                 rm -rf tester123
+                 rm -rf tester124
+                 rm -rf tester125 
                  mkdir tester123 tester124 tester125
                  cd tester123
                  touch image.png
