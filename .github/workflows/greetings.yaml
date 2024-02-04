@@ -1,0 +1,11 @@
+name: "Welcome the User"
+on: 
+    push:
+        branches: 
+            - master
+jobs: 
+    welcome:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "greet the user"
+              run: echo "Welcome"
