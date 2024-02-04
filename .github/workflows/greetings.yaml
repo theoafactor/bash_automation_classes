@@ -9,14 +9,14 @@ jobs:
         steps:
             - name: "Create tester1 directory"
               run: |
-                 mkdir tester1
-                 cd tester1
+                 mkdir tester123
+                 cd tester123
                  touch image.png
 
             - name: "Uses actions to upload the tester1 directory"
               uses: actions/upload-artifact@v4
               with: 
-                name: tester1 
-                path: tester1
+                name: result
+                path: tester123
              
                  
